@@ -12,12 +12,25 @@
         Esta é a página principal tem código JavaScript nela. Você só verá o
         resultado no console e durante a depuração.
       </p>
-      <script>
+  
+    </main>
+    <script>
         let maria;
         let joao;
         maria=1;
         joao=2;
+        deJoaoparaMaria();
+        deMariaparaJoao();
+        function deJoaoparaMaria()
+        {
+            maria = maria + joao;
+            joao=0;
+        }
+        function deMariaparaJoao()
+        {
+            joao= maria + joao;
+            maria= 0;
+        }
       </script>
-    </main>
   </body>
 </html>
