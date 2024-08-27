@@ -12,33 +12,39 @@
         Esta é a página principal tem código JavaScript nela. Você só verá o
         resultado no console e durante a depuração.
       </p>
-  
     </main>
     <script>
-        let omaria={
-            nome: "Maria",
-            qtd: 1
-        }
+      let omaria={
+          nome: "Maria",
+          qtd: 1,
+          comeu: function(){
+              omaria.qtd--;
+          }
+      }
 
-        
-        let ojoao={
-            nome:"João",
-            qtd: 2
-        }
-        
-        
-        deJoaoparaMaria();
-        deMariaparaJoao();
-        function deJoaoparaMaria()
-        {
-            omaria.qtd = omaria.qtd + ojoao.qtd;
-            ojoao.qtd=0;
-        }
-        function deMariaparaJoao()
-        {
-            ojoao.qtd= omaria.qtd + ojoao.qtd;
-            omaria.qtd= 0;
-        }
-      </script>
+
+      let ojoao={
+          nome:"João",
+          qtd: 2
+      }
+
+
+      deJoaoparaMaria();
+      console.log("Maria tinha ", omaria.qtd," maçãs");
+      omaria.comeu();
+      console.log("Maria comeu ", omaria.qtd," maçãs");
+      deMariaparaJoao();
+      function deJoaoparaMaria()
+      {
+          omaria.qtd = omaria.qtd + ojoao.qtd;
+          ojoao.qtd=0;
+
+      }
+      function deMariaparaJoao()
+      {
+          ojoao.qtd= omaria.qtd + ojoao.qtd;
+          omaria.qtd= 0;
+      }
+    </script>
   </body>
 </html>
