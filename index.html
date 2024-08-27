@@ -15,21 +15,29 @@
   
     </main>
     <script>
-        let maria;
-        let joao;
-        maria=1;
-        joao=2;
+        let omaria={
+            nome: "Maria",
+            qtd: 1
+        }
+
+        
+        let ojoao={
+            nome:"João",
+            qtd: 2
+        }
+        
+        
         deJoaoparaMaria();
         deMariaparaJoao();
         function deJoaoparaMaria()
         {
-            maria = maria + joao;
-            joao=0;
+            omaria.qtd = omaria.qtd + ojoao.qtd;
+            ojoao.qtd=0;
         }
         function deMariaparaJoao()
         {
-            joao= maria + joao;
-            maria= 0;
+            ojoao.qtd= omaria.qtd + ojoao.qtd;
+            omaria.qtd= 0;
         }
       </script>
   </body>
